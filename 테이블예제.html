@@ -32,6 +32,11 @@
     .red {
       color: red;
     }
+
+    .name-td {
+      text-align: center;
+      margin: auto;
+    }
   </style>
 </head>
 <body>
@@ -42,12 +47,17 @@
         <tbody>
           <tr>
             <td colspan="2" class="title-td">
-              <span><span class="red">(*필수입력)</span>회원 기본 정보</span>
+              <span>
+                <span class="red">(*필수입력)</span>
+                회원 기본 정보
+              </span>
             </td>
           </tr>
           <tr>
-            <td>
-              <span><span class="red">*</span>아이디:</span>
+            <td class="name-td">
+              <span>
+                <span class="red">*</span>아이디:
+              </span>
             </td>
             <td>
               <div>
@@ -57,13 +67,125 @@
             </td>
           </tr>
           <tr>
-            <td>
-              <span><span class="red">*</span>비밀번호:</span>
+            <td class="name-td">
+              <span>
+                <span class="red">*</span>비밀번호:
+              </span>
             </td>
             <td>
               <div>
                 <input type="password">
                 <span>4~12글자</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="name-td">
+              <span>
+                <span class="red">*</span>비밀번호확인:
+              </span>
+            </td>
+            <td>
+              <div>
+                <input type="password">
+                <input type="button" value="비밀번호 확인">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="name-td">
+              <span>
+                <span class="red">*</span>메일주소:
+              </span>
+            </td>
+            <td>
+              <div>
+                <input type="email">
+                <input type="button" value="메일 확인">
+                <span>예) id@domain.com</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="name-td">
+              <span>
+                <span class="red">*</span>이름:
+              </span>
+            </td>
+            <td>
+              <div>
+                <input type="text">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="title-td">개인 신상 정보</td>
+          </tr>
+          <tr>
+            <td class="name-td">
+              <span>
+                <span class="red">*</span>주민등록번호:
+              </span>
+            </td>
+            <td>
+              <div>
+                <input type="number">
+                - <input type="number">
+                <input type="button" value="확인">
+                <span>예) 123456-1234567</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="name-td">
+              <span>생일:</span>
+            </td>
+            <td>
+              <div>
+                <input type="number">
+                <span>년</span>
+                <input type="number">
+                <span>월</span>
+                <input type="number">
+                <span>일</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="name-td">
+              <span>주소:</span>
+            </td>
+            <td>
+              <div>
+                <input type="number">
+                <input type="button" value="우편번호 찾기">
+                <br>
+                <input type="text">
+                <input type="text">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="name-td">
+              <span>관심분야:</span>
+            </td>
+            <td>
+              <div>
+                <input type="checkbox">컴퓨터
+                <input type="checkbox">인터넷
+                <input type="checkbox">여행
+                <input type="checkbox">영화감상
+                <input type="checkbox">음악감상
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="name-td">
+              <span>자기소개:</span>
+            </td>
+            <td>
+              <div>
+                <textarea cols="50" rows="5"></textarea>
               </div>
             </td>
           </tr>
