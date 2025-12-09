@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <table>
+      <tbody>
+        <tr style="background-color: aliceblue;">
+          <td style="text-align: center;" colspan="2"><span style="color: red; font-size: small;"><i>(*필수입력)</i></span>회원 기본 정보</td>
+        </tr>
+        <tr>
+          <th><span style="color: red;">*</span>아이디:</th>
+          <td>
+            <input type="text" minlength="4" maxlength="12" placeholder="4~12자의 영문 대소문자, 숫자만 입력" style="width: 210px;">
+            <input type="button" value="아이디 검사">
+          </td>
+        </tr>
+        <tr>
+          <th><span style="color: red;">*</span>비밀번호:</th>
+          <td>
+            <input type="password" minlength="4" maxlength="12">
+            <label>4~12자의 영문 대소문자, 숫자로만 입력</label>
+          </td>
+        </tr>
+        <tr>
+          <th><span style="color: red;">*</span>비밀번호확인: </th>
+          <td>
+            <input type="password" minlength="4" maxlength="12">
+            <input type="button" value="비밀번호 확인">
+          </td>
+        </tr>
+        <tr>
+          <th><span style="color: red;">*</span>메일주소: </th>
+          <td>
+            <input type="email" style="width: 210px;">
+            <input type="button" value="메일 확인">
+            <label>예) id@domain.com</label>
+          </td>
+        </tr>
+        <tr>
+          <th><span style="color: red;">*</span>이름: </th>
+          <td>
+            <input type="text" style="width: 210px;">
+          </td>
+        </tr>
+        <tr style="background-color: aliceblue;">
+          <td style="text-align: center;" colspan="2">개인 신상 정보</td>
+        </tr>
+        </tr>
+        <tr>
+          <th><span style="color: red;">*</span>주민등록번호: </th>
+          <td>
+            <input type="number" min="0" max="9" style="width: 80px;"> 
+            - <input type="number" min="0" max="9" style="width: 80px;">
+            <input type="button" value="확인">
+            <label>예) 123456-1234567</label>
+          </td>
+        </tr>
+        <tr>
+          <th>생일:</th>
+          <td>
+            <input type="number" style="width: 80px;">년
+            <input type="number" style="width: 55px;">월
+            <input type="number" style="width: 55px;">일
+          </td>
+        </tr>
+        <tr>
+          <th>주소:</th>
+          <td>
+            <input type="number" style="width: 80px;">
+            <input type="button" value="우편번호 찾기">
+            <br>
+            <input type="text" style="width: 200px;">
+            <input type="text" style="width: 200px;">
+          </td>
+        </tr>
+        <tr>
+          <th>관심분야:</th>
+          <td>
+            <input type="checkbox">컴퓨터
+            <input type="checkbox">인터넷
+            <input type="checkbox">여행
+            <input type="checkbox">영화감상
+            <input type="checkbox">음악감상
+          </td>
+        </tr>
+        <tr>
+          <th>자기소개:</th>
+          <td>
+            <textarea cols="60px" rows="5px"></textarea>
+          </td>
+        </tr>
+        <!-- <tr style="border-bottom: none;">
+          <td colspan="2" style="text-align: center; border-bottom: none;">
+            <input type="button" value="회원 가입">
+            <input type="button" value="다시 입력">
+          </td>
+        </tr> -->
+      </tbody>
+    </table>
+
+    <br>
+    <div style="text-align: center;">
+      <input type="button" value="회원 가입">
+      <input type="button" value="다시 입력">
+    </div>
+    
+
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th {
+        text-align: center;
+        background-color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+    </style>
+  </form>
+</body>
+</html>
