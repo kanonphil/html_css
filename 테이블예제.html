@@ -14,6 +14,7 @@
       border: 1px solid black;
       border-collapse: collapse;
       width: 100%;
+      margin: auto;
     }
 
     tr {
@@ -22,6 +23,7 @@
 
     td {
       border: 1px solid black;
+      padding: auto;
     }
     
     .title-td {
@@ -31,11 +33,32 @@
 
     .red {
       color: red;
+      font-size: small;
+    }
+
+    .red-i {
+      color: red;
+      font-size: small;
+      font-style: italic;
     }
 
     .name-td {
       text-align: center;
       margin: auto;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .text-s {
+      width: 10%;
+    }
+
+    .text-xs {
+      width: 8%;
+    }
+
+    .text-l {
+      width: 35%;
     }
   </style>
 </head>
@@ -48,7 +71,7 @@
           <tr>
             <td colspan="2" class="title-td">
               <span>
-                <span class="red">(*필수입력)</span>
+                <span class="red-i">(*필수입력)</span>
                 회원 기본 정보
               </span>
             </td>
@@ -61,7 +84,7 @@
             </td>
             <td>
               <div>
-                <input type="text" placeholder="4~12글자">
+                <input type="text" placeholder="4~12자의 영문 대소문자, 숫자만 입력" class="text-l">
                 <button type="button">아이디 검사</button>
               </div>
             </td>
@@ -75,7 +98,7 @@
             <td>
               <div>
                 <input type="password">
-                <span>4~12글자</span>
+                <span>4~12자의 영문 대소문자와 숫자로만 입력</span>
               </div>
             </td>
           </tr>
@@ -100,7 +123,7 @@
             </td>
             <td>
               <div>
-                <input type="email">
+                <input type="email" class="text-l">
                 <input type="button" value="메일 확인">
                 <span>예) id@domain.com</span>
               </div>
@@ -114,7 +137,7 @@
             </td>
             <td>
               <div>
-                <input type="text">
+                <input type="text" class="text-l">
               </div>
             </td>
           </tr>
@@ -129,8 +152,8 @@
             </td>
             <td>
               <div>
-                <input type="number">
-                - <input type="number">
+                <input type="number" class="text-s">
+                - <input type="number" class="text-s">
                 <input type="button" value="확인">
                 <span>예) 123456-1234567</span>
               </div>
@@ -142,11 +165,11 @@
             </td>
             <td>
               <div>
-                <input type="number">
+                <input type="number" class="text-s">
                 <span>년</span>
-                <input type="number">
+                <input type="number" class="text-xs">
                 <span>월</span>
-                <input type="number">
+                <input type="number" class="text-xs">
                 <span>일</span>
               </div>
             </td>
@@ -157,7 +180,7 @@
             </td>
             <td>
               <div>
-                <input type="number">
+                <input type="number" class="text-s">
                 <input type="button" value="우편번호 찾기">
                 <br>
                 <input type="text">
@@ -185,7 +208,7 @@
             </td>
             <td>
               <div>
-                <textarea cols="50" rows="5"></textarea>
+                <textarea cols="60" rows="5"></textarea>
               </div>
             </td>
           </tr>
