@@ -1,0 +1,42 @@
+.container {
+  margin: 30px auto; /* 모든 바깥여백을 균등 */
+  width: 500px;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+}
+
+.right {
+  text-align: right;
+  margin: 0;
+}
+
+.btn-div {
+  text-align: right;
+  margin-top: 10px;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+tr, td {
+  border: 1px solid black;
+  margin: auto;
+}
+
+/* 
+  1rem -> 16px
+  font-size: 1rem;
+  font-size: 0.9rem;
+*/
+.caption {
+  margin: 0;
+  color: red;
+  font-size: 0.8rem;
+}
