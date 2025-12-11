@@ -1,0 +1,17 @@
+.container1 {
+  border: 1px solid black;
+  display: flex;
+}
+
+.container1 > .item {
+  border: 1px solid red;
+}
+
+.container2 {
+  border: 1px solid black;
+  display: inline-flex;
+}
+
+.container2 > .item {
+  border: 1px solid red;
+}
