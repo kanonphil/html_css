@@ -1,0 +1,46 @@
+.container {
+  width: 600px;
+  height: 500px;
+  margin: 30px auto;
+}
+
+div {
+  border: 3px solid black;
+}
+
+.header {
+  border-color: chartreuse;
+  height: 10%;
+  display: flex;
+}
+
+.header > div:first-child {
+  border-color: red;
+  width: 60%;
+}
+
+.header > div:last-child {
+  border-color: aquamarine;
+  width: 40%;
+}
+
+.body {
+  border-color: chocolate;
+  height: 80%;
+  display: flex;
+}
+
+.body > div:first-child {
+  border-color: burlywood;
+  width: 20%;
+}
+
+.body > div:last-child {
+  border-color: burlywood;
+  width: 80%;
+}
+
+.footer {
+  border: none;
+  height: 10%;
+}
