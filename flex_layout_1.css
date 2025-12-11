@@ -1,0 +1,36 @@
+.container {
+  width: 600px;
+  height: 500px;
+  border: 3px solid black;
+  margin: 30px auto;
+}
+
+div {
+  border: 3px solid black;
+}
+
+.header {
+  height: 10%;
+  border-color: aqua;
+}
+
+.body {
+  height: 80%;
+  border-color: crimson;
+  display: flex;
+}
+
+.body > div:first-child {
+  width: 20%;
+  border-color: orange;
+}
+
+.body > div:last-child {
+  width: 80%;
+  border-color: blueviolet;
+}
+
+.footer {
+  height: 10%;
+  border-color: gainsboro;
+}
