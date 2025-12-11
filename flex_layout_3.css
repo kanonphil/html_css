@@ -1,41 +1,37 @@
+div {
+  border: 3px solid black;
+}
+
 .container {
   width: 600px;
   height: 400px;
   margin: 30px auto;
 }
 
-div {
-  border: 3px solid black;
-}
-
-.div-1 {
-  border-color: burlywood;
+.container > div:first-child {
   height: 20%;
-  display: flex;
+  border-color: burlywood;
 }
 
-.div-2 {
-  border-color: yellowgreen;
+.main {
+  display: flex;
   height: 80%;
-  display: flex;
+  border-color: yellowgreen;
 }
 
-.div-2 > div:first-child {
-  border-color: forestgreen;
+.main > div:first-child {
   width: 60%;
-}
-
-.div-2 > div:last-child {
   border-color: forestgreen;
-  width: 40%;
 }
 
-.div-2-2 {
+.main > div:last-child {
+  width: 40%;
+  border-color: forestgreen;
   display: flex;
   flex-direction: column;
 }
 
-.div-2-2 > div {
+.main > div:last-child > div {
+  height: 100%;
   border-color: darkblue;
-  flex-grow: 1;
 }
