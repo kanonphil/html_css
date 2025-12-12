@@ -104,7 +104,7 @@ input, select {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .btn button {
@@ -114,6 +114,7 @@ input, select {
   cursor: pointer;
   background-color: #00b6ef;
   color: white;
+  box-shadow: 2px 2px 3px 2px lightgray;
 }
 
 .btn button:first-child:active {
