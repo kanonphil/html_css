@@ -1,0 +1,137 @@
+body {
+  background-color: #d9fcfe;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+input, select, button {
+  font-size: 0.9rem;
+  box-sizing: border-box !important;
+}
+
+/* Layout */
+.container {
+  background-color: white;
+  width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px gray;
+  padding: 80px;
+}
+
+/* Header */
+.header h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.header p {
+  margin-bottom: 40px;
+  font-size: 0.9rem;
+}
+
+/* =========== Form Text Label =========== */
+.form p {
+  margin: 18px 0 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* input + select 공통 */
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+}
+
+/* 아이디 박스 */
+.id-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.id-box input {
+  flex: 1;
+}
+
+.id-box button {
+  padding: 0 40px;
+  border: none;
+  background-color: #00b6ef;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 42px;
+}
+
+.id-box button:active {
+  background-color: #0094cd;
+}
+
+/* 주소 */
+.address input + input {
+  margin-top: 10px;
+}
+
+/* 이메일 */
+.email {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* .email input {
+  flex: 1;
+} */
+
+.email input:nth-child(2) {
+  background-color: #f5f5f5;
+}
+
+/* .email select {
+  width: 90px;
+} */
+
+/* 생년월일 */
+.birth {
+  display: flex;
+  gap: 30px;
+}
+
+/* 하단 버튼 */
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.btn button {
+  padding: 14px 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #00b6ef;
+  color: white;
+}
+
+.btn button:first-child:active {
+  background-color: #0094cd;
+}
+
+.btn button:last-child {
+  background-color: #efc900;
+}
+
+.btn button:last-child:active {
+  background-color: #cda700;
+}
+
+.red {
+  color: red;
+}
