@@ -1,0 +1,133 @@
+body {
+  background-color: #e0ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 1px 1px 7px 3px lightgray;
+}
+
+.img-div {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-div img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.img-div img:hover {
+  transform: scale(1.2);
+}
+
+.heart-span {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.heart-span:active {
+  color: red;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.info-div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-div > span:nth-child(2) {
+  font-size: 3rem;
+  color: #ffa602;
+}
+
+.info-2 {
+  display: flex;
+}
+
+.info-2 > div {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.agent-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.agent-info > img {
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  width: 50px;
+}
+
+.agent-info > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.footer > button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: #32cd32;
+  color: white;
+  cursor: pointer;
+}
+
+.footer > button:active {
+  background-color: #10ab10;
+}
+
+.font-m {
+  font-size: 1.4rem;
+}
+
+.font-s {
+  font-size: 1rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.gray {
+  color: gray;
+}
+
+hr {
+  width: 100%;
+}
