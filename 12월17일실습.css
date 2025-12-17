@@ -25,18 +25,19 @@ body {
   align-items: center;
 }
 
-.title > h1 {
+.header > h1 {
   cursor: pointer;
 }
 
-.header-info {
+.header > ul {
   display: flex;
   background-color: rgba(0, 0, 0, 0.3);
-  gap: 20px;
+  width: 650px;
+  justify-content: space-around;
+  padding: 15px 0;
 }
 
-.header-info > p {
-  padding: 15px 40px;
+.header > ul > li {
   cursor: pointer;
 }
 
@@ -53,15 +54,9 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   color: white;
-  padding: 20px 50px;
+  padding: 20px 65px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-
-.slider-overlay > p:first-child {
-  font-size: 2rem;
-  font-weight: 600;
 }
 
 .banner {
