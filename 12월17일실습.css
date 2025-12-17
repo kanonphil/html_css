@@ -100,6 +100,11 @@ body {
 .notice > div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  /* cursor: pointer; */
+}
+
+.notice > div > span:nth-child(1) {
   cursor: pointer;
 }
 
