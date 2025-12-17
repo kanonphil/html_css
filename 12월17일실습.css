@@ -58,7 +58,7 @@ body {
   padding: 20px 50px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .slider-overlay > p:first-child {
