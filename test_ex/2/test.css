@@ -49,6 +49,21 @@ body {
   color: #f78d21;
 }
 
+.nav ul li a {
+  text-decoration: none !important;
+  color: #000 !important;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.nav ul li a:visited {
+  color: #000 !important;
+}
+
+.nav ul li a:hover {
+  color: #f78d21 !important;
+}
+
 .header .search-box {
   position: relative;
   display: inline-flex !important;
