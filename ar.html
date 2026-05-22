@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+  body { background: #f8f9fa; padding: 32px; }
+
+  h1 { text-align: center; font-size: 18px; color: #333; margin-bottom: 28px; letter-spacing: 1px; }
+
+  .layer { border-radius: 12px; padding: 16px 20px 20px; margin-bottom: 20px; position: relative; }
+  .layer-label {
+    text-align: center; font-size: 12px; font-weight: 700;
+    letter-spacing: 2px; margin-bottom: 14px; padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  /* CLIENT */
+  .layer-client { background: #eef2ff; border: 1.5px solid #6366f1; }
+  .layer-client .layer-label { color: #4f46e5; }
+
+  /* SERVER */
+  .layer-server { background: #f0f4ff; border: 1.5px solid #818cf8; }
+  .layer-server .layer-label { color: #4338ca; }
+
+  /* DATA IoT */
+  .layer-data { background: #ecfdf5; border: 1.5px solid #34d399; }
+  .layer-data .layer-label { color: #059669; }
+
+  .row { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 16px;
+    flex: 1;
+    min-width: 160px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  }
+  .card-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 6px; }
+  .card-sub { font-size: 11px; color: #64748b; line-height: 1.6; }
+  .tag {
+    display: inline-block; font-size: 10px; padding: 2px 7px;
+    border-radius: 20px; margin-top: 6px; margin-right: 3px; font-weight: 600;
+  }
+  .tag-web  { background: #dbeafe; color: #1d4ed8; }
+  .tag-app  { background: #fce7f3; color: #be185d; }
+  .tag-both { background: #dcfce7; color: #15803d; }
+  .tag-iot  { background: #fef9c3; color: #a16207; }
+  .tag-warn { background: #fee2e2; color: #b91c1c; }
+
+  /* 두 컬럼 그룹 */
+  .client-group { flex: 1; }
+  .client-group-title {
+    font-size: 11px; font-weight: 700; color: #6366f1;
+    margin-bottom: 8px; padding-left: 2px; letter-spacing: 1px;
+  }
+
+  /* 화살표 구분선 */
+  .arrow-row {
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; margin: 6px 0; color: #94a3b8; font-size: 11px;
+  }
+  .arrow-row .arrow-line {
+    flex: 1; height: 1px; background: #cbd5e1;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+
+  /* 연결 설명 */
+  .conn-section { margin-top: 20px; }
+  .conn-title { font-size: 12px; font-weight: 700; color: #475569; margin-bottom: 10px; }
+  .conn-row {
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+  .conn-card {
+    background: #fff; border-radius: 8px; padding: 10px 14px;
+    border-left: 3px solid #6366f1; flex: 1; min-width: 200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .conn-card.app  { border-color: #ec4899; }
+  .conn-card.iot  { border-color: #10b981; }
+  .conn-card.data { border-color: #f59e0b; }
+  .conn-label { font-size: 11px; font-weight: 700; color: #334155; margin-bottom: 4px; }
+  .conn-desc  { font-size: 10px; color: #64748b; line-height: 1.6; }
+
+  /* diff 테이블 */
+  .diff-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 11px; }
+  .diff-table th { background: #f1f5f9; color: #475569; font-weight: 700; padding: 8px 12px; text-align: left; }
+  .diff-table td { padding: 8px 12px; border-bottom: 1px solid #f1f5f9; color: #334155; vertical-align: top; }
+  .diff-table tr:hover td { background: #f8fafc; }
+</style>
+</head>
+<body>
+
+<h1>🌱 한우마루 — 통합 시스템 아키텍처 (Web + App + IoT)</h1>
+
+<!-- CLIENT LAYER -->
+<div class="layer layer-client">
+  <div class="layer-label">CLIENT</div>
+  <div class="row">
+
+    <!-- WEB -->
+    <div class="client-group">
+      <div class="client-group-title">🌐 WEB (React)</div>
+      <div class="row">
+        <div class="card">
+          <div class="card-title">일반 유저</div>
+          <div class="card-sub">홈 · 상품 · 장바구니<br>주문 · 결제 · 알림 · 리뷰</div>
+          <span class="tag tag-web">iframe 결제</span>
+          <span class="tag tag-web">Cookie 인증</span>
+        </div>
+        <div class="card">
+          <div class="card-title">관리자</div>
+          <div class="card-sub">대시보드 · IoT 제어<br>재고 관리 · 주문 관리</div>
+          <span class="tag tag-web">Gemini AI</span>
+          <span class="tag tag-web">SSE 알림</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- APP -->
+    <div class="client-group">
+      <div class="client-group-title">📱 APP (React Native + Expo Router)</div>
+      <div class="row">
+        <div class="card">
+          <div class="card-title">일반 유저</div>
+          <div class="card-sub">홈 · 상품 · 장바구니<br>주문 · 결제 · 알림 · 리뷰</div>
+          <span class="tag tag-app">WebView 결제</span>
+          <span class="tag tag-app">SecureStore 인증</span>
+        </div>
+        <div class="card">
+          <div class="card-title">관리자</div>
+          <div class="card-sub">기기제어 · 센서 모니터링<br>임계값 설정 · 차트</div>
+          <span class="tag tag-app">SSE 알림</span>
+          <span class="tag tag-app">AppState fallback</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SERVER LAYER -->
+<div class="layer layer-server">
+  <div class="layer-label">SERVER</div>
+  <div class="row">
+    <div class="card">
+      <div class="card-title">Spring Boot</div>
+      <div class="card-sub">REST API<br>MyBatis · MariaDB 연동</div>
+      <span class="tag tag-both">Web + App 공유</span>
+    </div>
+    <div class="card">
+      <div class="card-title">Spring Security + JWT</div>
+      <div class="card-sub">인증 · 인가<br>Refresh Token 발급</div>
+      <span class="tag tag-web">Web → HTTP-only Cookie</span>
+      <span class="tag tag-app">App → Bearer Header</span>
+    </div>
+    <div class="card">
+      <div class="card-title">SSE Server</div>
+      <div class="card-sub">실시간 알림 스트림<br>주문 완료 · IoT 경보</div>
+      <span class="tag tag-both">Web + App 수신</span>
+    </div>
+    <div class="card">
+      <div class="card-title">Toss Payments API</div>
+      <div class="card-sub">결제 요청 · 승인<br>취소 · 환불 처리</div>
+      <span class="tag tag-web">Web → iframe</span>
+      <span class="tag tag-app">App → WebView</span>
+    </div>
+    <div class="card">
+      <div class="card-title">Gemini API</div>
+      <div class="card-sub">레시피 추천<br>리뷰 감성 분석<br>답글 초안 생성</div>
+      <span class="tag tag-web">Web 전용</span>
+    </div>
+    <div class="card">
+      <div class="card-title">AWS S3</div>
+      <div class="card-sub">상품 이미지 저장<br>Presigned URL 발급</div>
+      <span class="tag tag-both">Web + App 공유</span>
+    </div>
+  </div>
+</div>
+
+<!-- DATA & IoT LAYER -->
+<div class="layer layer-data">
+  <div class="layer-label">DATA &amp; IoT</div>
+  <div class="row">
+    <div class="card">
+      <div class="card-title">AWS RDS (MariaDB)</div>
+      <div class="card-sub">주문 · 유저 · 재고<br>센서 이력 · 알림 로그<br>임계값 프리셋</div>
+      <span class="tag tag-both">Web + App + IoT 공유</span>
+    </div>
+    <div class="card">
+      <div class="card-title">Raspberry Pi</div>
+      <div class="card-sub">DHT22 (온습도)<br>LDR (조도) · MQ (대기질)<br>LED · 팬 · 부저 제어</div>
+      <span class="tag tag-iot">센서 수집</span>
+      <span class="tag tag-iot">액추에이터 제어</span>
+    </div>
+    <div class="card">
+      <div class="card-title">Python FastAPI</div>
+      <div class="card-sub">IoT → Spring 브릿지<br>자동/수동 제어 API<br>JWT 검증 미들웨어</div>
+      <span class="tag tag-iot">Device JWT 검증</span>
+      <span class="tag tag-warn">단일 Pi 한계</span>
+    </div>
+  </div>
+</div>
+
+<!-- 통신 방식 차이 -->
+<div style="background:#fff; border-radius:12px; padding:20px; margin-top:4px; box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+  <div class="conn-title">🔗 주요 통신 흐름 & 플랫폼 차이</div>
+  <div class="conn-row">
+    <div class="conn-card">
+      <div class="conn-label">🌐 Web → Spring Boot</div>
+      <div class="conn-desc">
+        HTTP + JWT<br>
+        Refresh Token: HTTP-only Cookie (자동 관리)<br>
+        결제: iframe (브라우저 내장)<br>
+        SSE 수신: EventSource API
+      </div>
+    </div>
+    <div class="conn-card app">
+      <div class="conn-label">📱 App → Spring Boot</div>
+      <div class="conn-desc">
+        HTTP + JWT Bearer Header<br>
+        Refresh Token: Expo SecureStore (iOS Keychain / Android Keystore)<br>
+        결제: WebView + URL 인터셉트<br>
+        SSE 수신: EventSource + AppState fallback
+      </div>
+    </div>
+    <div class="conn-card iot">
+      <div class="conn-label">🔒 Spring Boot → Raspberry Pi</div>
+      <div class="conn-desc">
+        HTTP + Device JWT (role: DEVICE)<br>
+        JWT_SECRET 공유 (Spring Boot 서명 → Pi 검증)<br>
+        CORS: Spring Boot 주소만 허용<br>
+        Pi → Spring Boot: 센서 데이터 DB 저장
+      </div>
+    </div>
+    <div class="conn-card data">
+      <div class="conn-label">💾 Spring Boot → Data Layer</div>
+      <div class="conn-desc">
+        AWS RDS: MyBatis (SELECT FOR UPDATE 재고 비관적 락)<br>
+        AWS S3: Presigned URL 방식 이미지 업로드<br>
+        SSE: 알림 발생 시 Web · App 동시 스트리밍
+      </div>
+    </div>
+  </div>
+
+  <!-- 플랫폼 차이 테이블 -->
+  <div style="margin-top:16px;">
+    <div class="conn-title">📋 Web vs App 핵심 차이</div>
+    <table class="diff-table">
+      <tr>
+        <th>구분</th>
+        <th>🌐 Web (React)</th>
+        <th>📱 App (React Native)</th>
+      </tr>
+      <tr>
+        <td>토큰 저장</td>
+        <td>HTTP-only Cookie (브라우저 자동 관리)</td>
+        <td>Expo SecureStore (OS 수준 암호화)</td>
+      </tr>
+      <tr>
+        <td>API 전송</td>
+        <td>withCredentials (쿠키 자동 첨부)</td>
+        <td>Authorization: Bearer 헤더</td>
+      </tr>
+      <tr>
+        <td>결제창</td>
+        <td>iframe (브라우저 내장)</td>
+        <td>WebView + URL 인터셉트</td>
+      </tr>
+      <tr>
+        <td>SSE 처리</td>
+        <td>EventSource API</td>
+        <td>EventSource + AppState fallback</td>
+      </tr>
+      <tr>
+        <td>AI 기능</td>
+        <td>Gemini API 연동 (레시피·리뷰 분석)</td>
+        <td>미적용</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
